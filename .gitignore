@@ -1,3 +1,4 @@
+deployment_globals.php
 database_credentials.php
 packs/*
 tmp/*
