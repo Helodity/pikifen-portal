@@ -6,7 +6,7 @@
 	<h1>Welcome to Pikifen Portal!</h1>
 </header>
 <?php
-	$query = "SELECT * FROM packs WHERE public = TRUE ORDER BY id DESC LIMIT 10";
+	$query = "SELECT * FROM packs WHERE public = TRUE ORDER BY id DESC LIMIT 12";
 	$result = $conn->query($query);
 	make_gallery("Newest Packs", $result);
 ?>
@@ -15,7 +15,7 @@
 	$query = "SELECT packs.id, packs.public, COUNT(favorites.id) AS favorite_amount
 	FROM packs
 	JOIN favorites ON packs.id = favorites.pack_id AND packs.public = TRUE
-	GROUP BY packs.id ORDER BY favorite_amount DESC LIMIT 10";
+	GROUP BY packs.id ORDER BY favorite_amount DESC LIMIT 12";
 
 	$result = $conn->query($query);
 	make_gallery("Most Popular", $result);
