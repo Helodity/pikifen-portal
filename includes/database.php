@@ -112,12 +112,16 @@ function account_owns_pack(int $accountID, int $packID) : bool {
 	return $accountID === $packOwner;
 }
 
-function replace_pack_tags(int $packID, string $newPackTags) {
+function replace_pack_tags(int $packID, ?string $newPackTags) {
 	global $conn;
 	//Delete the old tags
 	$stmt = $conn->prepare("DELETE FROM pack_tags WHERE pack_id = ?");
 	$stmt->bind_param("i", $packID);
 	$stmt->execute();
+
+	if(!isset($newPackTags)){
+		return;
+	}
 
 	//Add new tags
 	$stmt = $conn->prepare("INSERT INTO pack_tags (pack_id, tag) VALUES (?, ?)");
