@@ -25,7 +25,7 @@ $search_placeholder = isset($_GET['query']) ? $_GET['query'] : "";
 	<head>
 		<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1">
 		<title><?= $PAGE_NAME?> - <?= $SITE_NAME ?></title>
-		<link href='<?= $SITE_ROOT ?>/main_style.css' type="text/css" rel="stylesheet" />
+		<link href='<?= $SITE_ROOT ?>/includes/main_style.css' type="text/css" rel="stylesheet" />
 		<link href="style.css" rel="stylesheet" />
 		<link rel="icon" type="image/x-icon" href='<?= $SITE_ROOT ?>/img/icon.png'>
 	</head>
@@ -46,7 +46,7 @@ $search_placeholder = isset($_GET['query']) ? $_GET['query'] : "";
 				</form>
 			</div>
 			<div class="header-button-group">
-			<?php //Needs to be a single line to avoid whitespace getting added ?>
+				<?php //Needs to be a single line to avoid whitespace getting added ?>
 				<?php foreach($header_info as $btn_info) { ?><button class="button-header no-text-on-small-screen" onclick="location.href ='<?= $SITE_ROOT . '/' . $btn_info["link"]?>'"><?=$btn_info["name"]?></button><?php } ?>
 			</div>
 		</div>

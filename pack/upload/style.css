@@ -1,0 +1,18 @@
+/*
+ * UPLOAD PAGE STUFF
+ */
+
+.upload-header {
+	text-align: center;
+	padding-top: 32px;
+	padding-bottom: 16px;
+	background: var(--footer_gradient);
+	width: 100%;
+	border-radius: var(--global_border_radius);
+	box-shadow: 0px 0px 4px #000000;
+	transition: 0.2s;
+	cursor: pointer;
+}
+.upload-header:hover {
+	transform: scale(1.02);
+}
