@@ -7,7 +7,7 @@ This is a non-commercial project created by fans of the Pikmin franchise for ent
 </p>
 <br>
 <p class="footer-text">Site made by Helodity. <i>Pikifen</i> made by Espyo</p>
-<p class="footer-text">Version 2.0.3 - July 2nd, 2026</p>
+<p class="footer-text">Version 2.0.4 - July 5th, 2026</p>
 </footer>
 </main>
 </body>
