@@ -11,7 +11,7 @@
 	make_gallery("Newest Packs", $result);
 ?>
 
-<?php
+<?php	
 	$query = "SELECT packs.id, packs.public, COUNT(favorites.id) AS favorite_amount
 	FROM packs
 	JOIN favorites ON packs.id = favorites.pack_id AND packs.public = TRUE
@@ -28,8 +28,7 @@
 		$stmt->bind_param("i", $accountID);
 		$stmt->execute();
 		$result = $stmt->get_result();
-
-		$result = $conn->query($query);
+		
 		make_gallery("Your Favorites", $result);
 	} 
 ?>
