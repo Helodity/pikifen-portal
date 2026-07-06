@@ -307,7 +307,8 @@ img {
 
 .header-text-page-name {
     font-size: var(--font_size_small);
-    animation: slide-in-left 0.5s
+    animation: slide-in-left 0.5s;
+	line-height: normal;
 }
 
 .header-search {
