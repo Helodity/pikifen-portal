@@ -148,6 +148,7 @@ footer {
 a {
 	color: var(--search_text_color);
 	transition: 0.1s;
+	text-decoration: none;
 }
 
 a:hover{
@@ -298,6 +299,7 @@ img {
 .header-text-site-name {
 	color: var(--search_text_color);
 	font-size: var(--font_size_medium);
+	text-decoration: underline;
 }
 
 .header-text-site-name:hover {
@@ -595,7 +597,6 @@ img {
 .gallery-entry-name {
 	color: var(--search_text_color);
 	text-align: center;
-	text-decoration: none;
 	text-overflow: ellipsis;
 }
 
@@ -687,7 +688,6 @@ img {
 
 .list-entry-name {
 	color: var(--search_text_color);
-	text-decoration: none;
 	display: inline-block;
 	margin-right: auto;
 	max-width: 75%;
@@ -698,7 +698,6 @@ img {
 
 .list-entry-description {
 	color: var(--search_text_color);
-	text-decoration: none;
 	text-shadow: 2px 2px #000000;
 	display: block;
 	container-type: inline-size;
@@ -706,7 +705,7 @@ img {
 	width: 100%;
 	text-overflow: ellipsis;
 	overflow-wrap: anywhere;
-	max-height: 3rem;
+	height: 3rem;
 	line-height: 1.5rem;
 	
 }
@@ -728,7 +727,6 @@ img {
 .list-entry-maker {
 	color: var(--search_text_color);
 	text-shadow: 2px 2px #000000;
-	text-decoration: none;
 	display: inline-block;
 	margin: auto 0 auto auto;
 }
