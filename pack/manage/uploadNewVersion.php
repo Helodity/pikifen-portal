@@ -41,6 +41,12 @@
 			throw new RuntimeException('Forbidden.');
 		}
 
+		//Additional check. If content has a non-zero length but post is empty,
+		//We tried to upload but it was wayyyy too big
+		if (isset($_SERVER['CONTENT_LENGTH']) && empty($_POST)) {
+			throw new RuntimeException('Packs cannot exceed 30 Megabytes!');
+		}
+
 		// Check $_FILES['upfile']['error'] value.
 		if (
 			!isset($_FILES['pack']['error']) ||

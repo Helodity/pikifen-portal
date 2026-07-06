@@ -1,4 +1,6 @@
 <?php
+	
+
 	session_start();
 	include '../../includes/globals.php';
 	include '../../includes/functions.php';
@@ -29,11 +31,17 @@
 			throw new RuntimeException('Forbidden.');
 		}
 
+		//Additional check. If content has a non-zero length but post is empty,
+		//We tried to upload but it was wayyyy too big
+		if (isset($_SERVER['CONTENT_LENGTH']) && empty($_POST)) {
+			throw new RuntimeException('Packs cannot exceed 30 Megabytes!');
+		}
+
 		if (
 			!isset($_FILES['pack']['error']) ||
 			is_array($_FILES['pack']['error'])
 		) {
-			throw new RuntimeException('Invalid parameters.');
+			throw new RuntimeException('Invalid Parameters.');
 		}
 
 		// Check $_FILES['upfile']['error'] value.
@@ -49,7 +57,7 @@
 				throw new RuntimeException('Unknown error.');
 		}
 
-		// 5 Megabyte limit
+		// 30 Megabyte limit
 		if ($_FILES['pack']['size'] > 30000000) {
 			throw new RuntimeException('Packs cannot exceed 30 Megabytes!');
 		}
