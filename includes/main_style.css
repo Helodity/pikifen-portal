@@ -158,23 +158,19 @@ ul {
 h1 {
     text-align: center;
 	font-size: var(--font_size_gargantuan);
-	line-height: 3rem;
 }
 h2 {
     margin: 8px 0px 8px 0px;
     font-size: var(--font_size_massive);
-	line-height: 2rem;
 }
 h3 {
 	margin: 8px 0px 8px 0px;
     font-size: var(--font_size_large);
-	line-height: 2rem;
 }
 
 p {
     margin: 0px;
     font-size: var(--font_size_medium);
-	line-height: 1.5rem;
 }
 
 input[type="file"] {
@@ -694,14 +690,14 @@ img {
 .list-entry-description {
 	color: var(--search_text_color);
 	text-shadow: 2px 2px #000000;
-	display: block;
 	container-type: inline-size;
 	overflow: hidden;
 	width: 100%;
 	text-overflow: ellipsis;
 	overflow-wrap: anywhere;
-	height: 3rem;
-	line-height: 1.5rem;	
+	display: -webkit-box;
+  	-webkit-box-orient: vertical;
+  	-webkit-line-clamp: 2;
 }
 
 .list-entry-tags-parent {
