@@ -151,11 +151,6 @@ a {
 	text-decoration: none;
 }
 
-a:hover{
-	color: var(--main_color_dark);
-	text-shadow: 0 0;
-}
-
 ul {
 	margin: 0px 0px 8px 0px;	
 }
@@ -706,8 +701,7 @@ img {
 	text-overflow: ellipsis;
 	overflow-wrap: anywhere;
 	height: 3rem;
-	line-height: 1.5rem;
-	
+	line-height: 1.5rem;	
 }
 
 .list-entry-tags-parent {
