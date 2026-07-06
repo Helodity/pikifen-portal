@@ -678,7 +678,8 @@ img {
 }
 
 .list-contents {
-	display: inline-block;
+	display: flex;
+	flex-direction: column;
 	width: 100%
 }
 
@@ -713,7 +714,8 @@ img {
 }
 
 .list-entry-tags-parent {
-	display:flex;
+	display: flex;
+	margin: auto 0 4px 0;
 }
 
 .list-entry-tag {
