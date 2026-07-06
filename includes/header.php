@@ -35,7 +35,7 @@ $search_placeholder = isset($_GET['query']) ? $_GET['query'] : "";
 				<a class='header-logo-anchor' href="<?= $SITE_ROOT ?>"><img src='<?= $SITE_ROOT ?>/img/icon.png' class='header-logo'></a>
 				<div class="header-text">
 					<a class="header-text-site-name" href="<?= $SITE_ROOT ?>"><?= $SITE_NAME ?></a>
-					<p class="header-text-page-name" style="font-size: var(--font_size_small);"><?= $PAGE_NAME ?></p>
+					<p class="header-text-page-name""><?= $PAGE_NAME ?></p>
 				</div>
 			</div>
 			<div class="header-search">
