@@ -33,7 +33,7 @@
 
 		//Additional check. If content has a non-zero length but post is empty,
 		//We tried to upload but it was wayyyy too big
-		if (isset($_SERVER['CONTENT_LENGTH']) && empty($_POST)) {
+		if (isset($_SERVER['CONTENT_LENGTH']) && empty($_FILES)) {
 			throw new RuntimeException('Packs cannot exceed 30 Megabytes!');
 		}
 
