@@ -57,7 +57,7 @@
 <div class='pack-root'>
 	<div class='pack-left'>
 		<div class="gallery-image-parent">
-			<img class="pack-icon" src="<?= get_thumbnail($packID); ?>">
+			<img class="pack-icon" src="<?= get_thumbnail($packID, 200); ?>">
 		</div>
 		<?php if($isOwner) { ?>
 			<form action="replaceThumbnail.php" method="post" enctype="multipart/form-data">
