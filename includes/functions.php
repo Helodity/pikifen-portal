@@ -27,12 +27,10 @@ function int_to_version(int $version): string {
 	return $majorVersion . "." . $minorVersion . "." . $revisionVersion;
 }
 
-function get_thumbnail(int $packID, int $size = 100): string {
+function get_thumbnail(int $packID, int $size = 75): string {
 	global $SITE_ROOT;
 	global $LOCAL_ROOT;
-	//file_exists is fucking dumb and HATES working with the site_root system
-	//Sooooooo yeah we gotta use __DIR__ and then if THAT exists switch to
-	//$SITE_ROOT. Its dumb and i hate it.
+
 	$localthumbnailPath = $LOCAL_ROOT . '/packs/' . $packID . '/thumbnail.png';
 	clearstatcache();
 	if(file_exists($localthumbnailPath)) {
