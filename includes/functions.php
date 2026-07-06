@@ -27,7 +27,7 @@ function int_to_version(int $version): string {
 	return $majorVersion . "." . $minorVersion . "." . $revisionVersion;
 }
 
-function get_thumbnail(int $packID, int $size = 75): string {
+function get_thumbnail(int $packID, int $size = 100): string {
 	global $SITE_ROOT;
 	global $LOCAL_ROOT;
 
