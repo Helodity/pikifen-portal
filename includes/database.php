@@ -129,8 +129,10 @@ function replace_pack_tags(int $packID, ?string $newPackTags) {
 	for($i = 0; $i < count($tagList); $i++) {
 		$tagList[$i] = trim($tagList[$i]);
 
-		$stmt->bind_param("is", $packID, $tagList[$i]);
-		$stmt->execute();
+		if(!ctype_space($tagList[$i]) && !empty($tagList[$i])) {
+			$stmt->bind_param("is", $packID, $tagList[$i]);
+			$stmt->execute();
+		}
 	}
 }
 
@@ -148,7 +150,7 @@ function get_pack_tag_string(int $packID) {
 	return $output;
 }
 
-function get_pack_tag_array(int $packID) {
+function get_pack_tag_array(int $packID, int $tagCount = -1) {
 	global $conn;
 	$stmt = $conn->prepare("SELECT tag FROM pack_tags WHERE pack_id = ?");
 	$stmt->bind_param("i", $packID);
@@ -157,8 +159,13 @@ function get_pack_tag_array(int $packID) {
 
 	$output = [];
 
-	while($row = $result->fetch_assoc()['tag']){
+	while($row = (string)($result->fetch_assoc()['tag'])){
 		$output[] = $row;
+		//If I try to put this in the while loop, php thinks we're working with booleans
+		//which goes about as well as you'd expect.
+		if($tagCount != -1 && count($output) >= $tagCount) {
+			break;
+		}
 	}
 	return $output;
 }

@@ -719,6 +719,7 @@ img {
 .list-entry-tags-parent {
 	display: flex;
 	margin: auto 0 4px 0;
+	flex-wrap: wrap;
 }
 
 .list-entry-tag {
@@ -726,7 +727,6 @@ img {
 	background: var(--tag_gradient);
 	margin: 4px 8px 4px 0;
 	border-radius: var(--global_border_radius);
-	transition: 0.2s;
 	padding: 4px;
 	box-shadow: 0px 0px 2px #000000;
 }
