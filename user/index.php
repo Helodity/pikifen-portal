@@ -57,27 +57,27 @@
 
 <?php if(isset($_SESSION['accountID']) && account_has_permission($_SESSION['accountID'], PERMISSIONS::MODIFY_USERS)) { ?>
 
-<h2>Manage User</h2>
-<h3>Modify permissions</h3>
-<form action="modify.php" method="post">
-	<input type="checkbox" name="permissions[]" value="1" 
-	<?php if(account_has_permission($accountID, PERMISSIONS::UPLOAD_PACKS)) {echo "checked";} ?>>Upload Packs<br>
-	<input type="checkbox" name="permissions[]" value="2" 
-	<?php if(account_has_permission($accountID, PERMISSIONS::MODIFY_OTHERS)) {echo "checked";} ?>>Modify Unowned Packs<br>
-	<input type="checkbox" name="permissions[]" value="4" 
-	<?php if(account_has_permission($accountID, PERMISSIONS::MODIFY_USERS)) {echo "checked";} ?>>Modify Users<br>
-	
-	<input class="button-main" type="submit" value="Submit">
-	
-	<input type='hidden' name="userID" value="<?= $accountID ?>">
-</form>
-<br>
-<?php if(!$ownAccount) { ?>
-<form action="ban.php" method="post">
-<button type="submit" class="button-warning">Ban User</button>
-<input type='hidden' name="userID" value="<?= $accountID ?>">
-</form>
-<p class="error-text">This will delete everything uploaded by this user, and prevent them from uploading anything new!</p>
+	<h2>Manage User</h2>
+	<h3>Modify permissions</h3>
+	<form action="modify.php" method="post">
+		<input type="checkbox" name="permissions[]" value="1" 
+		<?php if(account_has_permission($accountID, PERMISSIONS::UPLOAD_PACKS)) {echo "checked";} ?>>Upload Packs<br>
+		<input type="checkbox" name="permissions[]" value="2" 
+		<?php if(account_has_permission($accountID, PERMISSIONS::MODIFY_OTHERS)) {echo "checked";} ?>>Modify Unowned Packs<br>
+		<input type="checkbox" name="permissions[]" value="4" 
+		<?php if(account_has_permission($accountID, PERMISSIONS::MODIFY_USERS)) {echo "checked";} ?>>Modify Users<br>
+		
+		<input class="button-main" type="submit" value="Submit">
+		
+		<input type='hidden' name="userID" value="<?= $accountID ?>">
+	</form>
+	<br>
+	<?php if(!$ownAccount) { ?>
+		<form action="ban.php" method="post">
+		<button type="submit" class="button-warning">Ban User</button>
+		<input type='hidden' name="userID" value="<?= $accountID ?>">
+		</form>
+		<p class="error-text">This will delete everything uploaded by this user, and prevent them from uploading anything new!</p>
 
 <?php }} ?>
 

@@ -148,6 +148,22 @@ function get_pack_tag_string(int $packID) {
 	return $output;
 }
 
+function get_pack_tag_array(int $packID) {
+	global $conn;
+	$stmt = $conn->prepare("SELECT tag FROM pack_tags WHERE pack_id = ?");
+	$stmt->bind_param("i", $packID);
+	$stmt->execute();
+	$result = $stmt->get_result();
+
+	$output = [];
+
+	while($row = $result->fetch_assoc()['tag']){
+		$output[] = $row;
+	}
+	return $output;
+}
+
+
 function can_modify_pack(int $accountID, int $packID) : bool {
 	//If you own the pack, you can delete it.
 	if(account_owns_pack($accountID, $packID)) return true;

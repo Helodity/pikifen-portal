@@ -79,6 +79,13 @@ function make_list_item(int $packID, int $entryID) {
 		echo '<div class="list-contents">';
 			echo '<div style="width:100%; display:flex"><h3 class="list-entry-name">' . $packInfo['name'] . '</h3><p class="list-entry-maker"> By ' . get_username($packInfo['account_id']) . '</p></div>';
 			echo '<p class="list-entry-description">' . $packInfo['description'] . '</p>';
+			$tags = get_pack_tag_array($packID);
+			echo '<div class="list-entry-tags-parent">';
+			foreach($tags as $tag) {
+				echo '<p class="list-entry-tag">'. $tag . '</p>';
+			}
+			echo '</div>';
+
 		echo '</div>';
 	echo '</a>';
 }

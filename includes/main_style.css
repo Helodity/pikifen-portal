@@ -86,6 +86,7 @@
 html {
 	font-family: mainFont;
 	text-shadow: 2px 2px #000000;
+	text-overflow: ellipsis;
 }
 
 body {
@@ -161,19 +162,23 @@ ul {
 h1 {
     text-align: center;
 	font-size: var(--font_size_gargantuan);
+	line-height: 3rem;
 }
 h2 {
     margin: 8px 0px 8px 0px;
     font-size: var(--font_size_massive);
+	line-height: 2rem;
 }
 h3 {
 	margin: 8px 0px 8px 0px;
     font-size: var(--font_size_large);
+	line-height: 2rem;
 }
 
 p {
     margin: 0px;
     font-size: var(--font_size_medium);
+	line-height: 1.5rem;
 }
 
 input[type="file"] {
@@ -590,6 +595,7 @@ img {
 	color: var(--search_text_color);
 	text-align: center;
 	text-decoration: none;
+	text-overflow: ellipsis;
 }
 
 
@@ -618,7 +624,7 @@ img {
 }
 
 .list-item-root {
-	height: 125px;
+	height: 9.5rem;
 	margin: 4px;
 	font-family: mainFont;
 	text-shadow: 2px 2px #000000;
@@ -635,14 +641,15 @@ img {
 	flex-shrink: 0;
 	background-image: var(--button_gradient);
 	overflow: hidden;
-	display:flex;
+	width: 100%;
+	display: flex;
+
 }
 
 .list-item-root:hover {
 	transform: scale(1.005);
 	background: var(--gallery_gradient_hover);
 }
-
 
 .list-image-parent {
 	display: inline-block;
@@ -693,7 +700,28 @@ img {
 	text-decoration: none;
 	text-shadow: 2px 2px #000000;
 	display: block;
+	container-type: inline-size;
 	overflow: hidden;
+	width: 100%;
+	text-overflow: ellipsis;
+	overflow-wrap: anywhere;
+	max-height: 3rem;
+	line-height: 1.5rem;
+	
+}
+
+.list-entry-tags-parent {
+	display:flex;
+}
+
+.list-entry-tag {
+	box-sizing: border-box;
+	background: var(--gallery_gradient);
+	margin: 4px 8px 4px 0;
+	border-radius: var(--global_border_radius);
+	transition: 0.2s;
+	padding: 4px;
+	box-shadow: 0px 0px 4px #000000;
 }
 
 .list-entry-maker {
