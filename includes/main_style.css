@@ -211,15 +211,15 @@ img {
 .bg {
 	height: 100%;
 	width: 100%;
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
 	opacity: 1;
 	top: 0px;
 	left: 0px;
 	z-index: -1;
 	position: fixed;
 	background: url(../img/bg.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 @keyframes slide-in-left {
@@ -752,6 +752,7 @@ img {
 .pack-root {
 	display: flex;
 	margin-top: 16px;
+	overflow: hidden;
 }
 
 .pack-left {
@@ -764,6 +765,11 @@ img {
 	width: 300px;
 	padding: 8px;
 	z-index: 1;
+}
+
+@keyframes pack-slide-in {
+	0% { transform: translateX(-10%); opacity: 0; }
+	100% { transform: translateX(0); opacity: 1;}
 }
 
 .pack-right {
