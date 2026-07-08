@@ -108,11 +108,11 @@
 			<th>
 			<?php if($isOwner) { ?>
 			<form action="uploadNewVersion.php" method="post" enctype="multipart/form-data">
-			<label for="pack" class="button-main">Upload new version</label>
-			<input type="file" name="pack" id="pack" onchange="this.form.submit()">
+				<label for="pack" class="button-main">Upload new version</label>
+				<input type="file" name="pack" id="pack" onchange="this.form.submit()">
 				<input type="hidden" name="packID" value="<?= $packID ?>">
-				</form>
-				<?php } ?>
+			</form>
+			<?php } ?>
 				</th>
 				</tr>
 				<?php while ($row = $version_query->fetch_assoc()) {

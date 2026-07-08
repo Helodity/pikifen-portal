@@ -264,6 +264,7 @@ img {
 
 .error-text {
 	color: var(--error_color);
+	margin: 8px 0 4px 0;
 }
 
 .header {
@@ -456,10 +457,11 @@ img {
 	cursor: pointer;
 	transition: 0.1s;
 	box-sizing: border-box;
-	margin: 8px 0px 8px 0px;
+	margin: 4px 0px 4px 0px;
 	padding: 8px 6px 8px 6px;
 	flex-shrink: 0;
 	background-image: var(--button_gradient);
+	display: inline-block;
 }
 
 .button-main:hover {
