@@ -84,13 +84,13 @@
 		}
 
 		$target_dir = $LOCAL_ROOT . "/packs/" . $packID  . "/";
-		move_uploaded_file(
+		if(!move_uploaded_file(
 			$_FILES["thumbnail"]["tmp_name"], 
 			$target_dir . "thumbnail.png"
-		);
-		
-
-
+		)) {
+			throw new RuntimeException('Unable to upload thumbnail! Error #1. Contact the site owner.');
+		}
+	
 	} catch (RuntimeException $e) {
 		$_SESSION['errors']['thumbnailUpload'] = $e->getMessage();
 	} catch (ValueError $e) {
