@@ -2,7 +2,7 @@
 	$PAGE_NAME = "Search Results";
 	include 'includes/header.php';
 	
-	$searchQuery = strtolower($_GET['query']) ?? '';
+	$rawSearchQuery = strtolower($_GET['query']) ?? '';
 
 	$stmt = $conn->prepare(
 		"SELECT packs.id, accounts.username, pack_tags.tag, COUNT(favorites.id) AS favorite_amount FROM packs
@@ -19,16 +19,17 @@
 			AND packs.public = TRUE
 		GROUP BY packs.id ORDER BY favorite_amount DESC");
 
-	$searchQuery = "%" . $searchQuery . "%";
+	$searchQueryTagmatch = $rawSearchQuery;
+	$searchQueryContains = "%" . $rawSearchQuery . "%";
 
 	$stmt->bind_param(
 		"sss",
-		$searchQuery,
-		$searchQuery,
-		$searchQuery
+		$searchQueryContains, //Username
+		$searchQueryContains, //Pack name
+		$searchQueryTagmatch  //Tags
 	);
 	if(isset($_GET['random'])) {
-		//If we clicked random, get a random pack!
+		//If we clicked random, instead ignore allathat and get a random pack!
 		$stmt = $conn->prepare("SELECT * FROM packs ORDER BY RAND() LIMIT 1;");
 	}
 	$stmt->execute();
