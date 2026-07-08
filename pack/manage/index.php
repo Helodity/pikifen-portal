@@ -92,6 +92,9 @@
 
 
 		<h2>Manage Versions</h2>
+		<?php if(isset($_SESSION['errors']['packUpload'])) { ?>
+			<p class="error-text"><?=$_SESSION['errors']['packUpload']?></p>
+		<?php } ?>
 		<table style="width:100%; text-align:center;">
 			<?php
 				$stmt = $conn->prepare("SELECT * FROM pack_versions WHERE pack_id = ? ORDER BY pack_version DESC");
@@ -107,9 +110,6 @@
 			<form action="uploadNewVersion.php" method="post" enctype="multipart/form-data">
 			<label for="pack" class="button-main">Upload new version</label>
 			<input type="file" name="pack" id="pack" onchange="this.form.submit()">
-			<?php if(isset($_SESSION['errors']['packUpload'])) { ?>
-				<p class="error-text"><?=$_SESSION['errors']['packUpload']?></p>
-				<?php } ?>
 				<input type="hidden" name="packID" value="<?= $packID ?>">
 				</form>
 				<?php } ?>

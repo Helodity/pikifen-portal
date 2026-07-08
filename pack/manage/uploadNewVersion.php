@@ -189,12 +189,13 @@
 		$stmt->execute();
 		$result = $stmt->get_result();
 
-		//If we dont have an entry for this combo, insert it.
-		if(mysqli_num_rows($result) == 0) {
-			$stmt = $conn->prepare("INSERT INTO pack_versions (pack_id, engine_version, pack_version) VALUES (?, ?, ?)");
-			$stmt->bind_param("iii", $packID, $packEngineVersion, $packVersion);
-			$stmt->execute();
+		//If we have an entry for it, don't allow uploading
+		if(mysqli_num_rows($result) != 0) {
+			throw new RuntimeException('You have already uploaded pack ' . int_to_version($packVersion) . ' for Pikifen ' . int_to_version($packEngineVersion) . '!');
 		}
+		$stmt = $conn->prepare("INSERT INTO pack_versions (pack_id, engine_version, pack_version) VALUES (?, ?, ?)");
+		$stmt->bind_param("iii", $packID, $packEngineVersion, $packVersion);
+		$stmt->execute();
 		
 		$target_dir = $LOCAL_ROOT . "/packs/" . $packID  . "/";
 	
