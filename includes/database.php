@@ -159,8 +159,8 @@ function get_pack_tag_array(int $packID, int $tagCount = -1) {
 
 	$output = [];
 
-	while($row = (string)($result->fetch_assoc()['tag'])){
-		$output[] = $row;
+	while($row = $result->fetch_assoc()){
+		$output[] = $row['tag'];
 		//If I try to put this in the while loop, php thinks we're working with booleans
 		//which goes about as well as you'd expect.
 		if($tagCount != -1 && count($output) >= $tagCount) {
