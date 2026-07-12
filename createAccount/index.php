@@ -12,6 +12,7 @@
 	<p class='form-label'>Confirm Password:</p><p><input class='text-input' type='password' name='confirmPassword'></p>
 	<?php if(isset($_SESSION['errors']['confirmPassword'])) {echo '<p class="error-text">' . $_SESSION['errors']['confirmPassword'] . '</p>';} ?>
 	<input class='button-main' type='submit' value='Register!'>
+	<p class="form-footer">By creating an account, you agree to Pikifen Portal's <u><a href='../tos.php'>Terms of Service</a></u></p>
 	<p class="form-footer"> Already have an account? Log in <u><a href='../login'>here!</a></u></p>
 </form>
 

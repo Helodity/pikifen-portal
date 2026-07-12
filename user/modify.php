@@ -25,7 +25,7 @@
 	$accountID = $_SESSION['accountID'];
 	
 	//Ensure the user has permissions
-	if(!account_has_permission($accountID, PERMISSIONS::MODIFY_USERS)) {
+	if(!account_has_permission($accountID, PERMISSIONS::MODIFY_USERS) || $targetID == $accountID) {
 		header("Location: ../user?id=" . $targetID);
 		die();
 	}

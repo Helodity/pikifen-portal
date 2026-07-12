@@ -37,8 +37,9 @@ $makerName = get_username($makerID);
 $PAGE_NAME = $packName;
 include '../includes/header.php';
 
-$isOwner = 				isset($_SESSION['accountID']) ? account_owns_pack($_SESSION['accountID'], $packID): false;
-$hasDeletePermissions = isset($_SESSION['accountID']) ? can_modify_pack($_SESSION['accountID'], $packID): false;
+$isLoggedIn = isset($_SESSION['accountID']);
+$isOwner = 				$isLoggedIn ? account_owns_pack($_SESSION['accountID'], $packID): false;
+$hasDeletePermissions = $isLoggedIn ? can_modify_pack($_SESSION['accountID'], $packID): false;
 
 $hasManageOptions = $isOwner || $hasDeletePermissions;
 

@@ -172,7 +172,14 @@ a {
 
 ul {
 	margin: 0px 0px 8px 0px;	
+	font-size: var(--font_size_medium);
 }
+
+ol {
+	margin: 0px 0px 8px 0px;	
+	font-size: var(--font_size_medium);
+}
+
 
 h1 {
     text-align: center;
@@ -799,5 +806,19 @@ img {
 	width: 100%;
 	margin-top: 32px;
 	margin-bottom: 32px;
+	padding: 16px;
+}
+
+
+
+.tos-contents {
+	background: var(--tag_gradient);
+	box-shadow: 0px 0px 4px #000000;
+	border-radius: var(--global_border_radius) var(--global_border_radius);
+	overflow: hidden;
+	color: var(--text_color_light);
+	box-sizing: border-box;
+	width: 80%;
+	margin: 32px auto 32px auto;
 	padding: 16px;
 }
