@@ -7,6 +7,8 @@
 </header>
 <br>
 <div class="tos-contents">
+    <p>Effective Date: July 12th, 2026</p>
+    <br>
     <h2>Table of Contents</h2>
     <ol>
         <li>Definitions</li>
