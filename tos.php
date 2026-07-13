@@ -148,7 +148,7 @@
             <p>To the extent this agreement is not enforceable by applicable law, you grant Pikifen Portal the rights we need to use Your Content without attribution and to make reasonable adaptations of Your Content as necessary to render the Website and provide the Service.</p>
 
         <h3>5.7 Additional Licenses</h3>
-            <p>You may specify additional licenses for Users by including a license.txt file within a pack's download. The </p>
+            <p>You may specify additional licenses for Users by including a license.txt file within a pack's download.</p>
             <br>
             <p>If no additional license is specified, by making your pack public, you agree to release your pack under the <a href="https://mit-license.org/">MIT license</a>.</p>
     <br>
