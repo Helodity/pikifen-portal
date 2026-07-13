@@ -162,7 +162,7 @@
 
     <br>
     <h2>7. Copyright Infringement and DMCA Policy</h2>
-        <p>If you believe that content on our website violates your copyright, please contact us at pikifenportal@gmail.com. If you are a copyright owner and you believe that content on Pikifen Portal violates your rights, please contact us by emailing pikifenportal@gmail.com. There may be legal consequences for sending a false or frivolous takedown notice. Before sending a takedown request, you must consider legal uses such as fair use and licensed uses.</p>
+        <p>If you believe that content on our website violates your copyright, please contact us at pikifenportal@gmail.com. There may be legal consequences for sending a false or frivolous takedown notice. Before sending a takedown request, you must consider legal uses such as fair use and licensed uses.</p>
         <br>
         <p>We will terminate the Accounts of repeat infringers of this policy.</p>
 
