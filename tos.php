@@ -63,10 +63,16 @@
             <p>Users that register an account on Pikifen Portal will have their username and email address recorded in order to identify them. Usernames are public, and are displayed with any content uploaded by the User.</p>
             <br>
             <p>Pikifen Portal cannot be held responsible for any personal information posted publicaly on the site. Users should not share more than is absolutely necessary.</p>
+        
+        <h3>3.2 Your Content</h3>
+            <p>Your Content will be recorded and stored on our servers. Your Content may be used to provide, develop, and improve the Service.</p>
+
         <h3>3.2 Session</h3>
             <p>Sesion data such as your account Id, IP address, browser, operating system, screen resolution, and geographic location may be recorded through Cookies. This data is required for site navigation.</p>
+        
         <h3>3.3 Usage</h3>
             <p>Users that interact with the Service will have their starred packs recorded. This data is used for improving search results and recommending packs to other Users.</p>
+
         <h3>3.4 Erasure</h3>
             <p>You have the right to erase your personal data as described in Section 9.1-9.2.</p>
 
@@ -128,21 +134,23 @@
         <h3>5.3 Ownership and License Grants</h3>
             <p>You own Your Content. If you post Content you did not create, you are responsible for ensuring you have the right to post it and for complying with any applicable licenses.</p>
             <br>    
-            <p>You grant us and other Users the licenses in Sections 5.4-5.6. These licenses apply to Your Content. If Your Content already includes a license granting us the permissions we need, no additional license is required. You will not receive payment for these rights. These licenses end when you remove Your Content.</p>
+            <p>You grant us and other Users the licenses in Sections 5.4-5.7. These licenses apply to Your Content. If Your Content already includes a license granting us the permissions we need, no additional license is required. You will not receive payment for these rights. These licenses end when you remove Your Content.</p>
 
         <h3>5.4 License Grant to Us</h3>
             <p>You grant Pikifen Portal the right to store, host, archive, parse, display, and make copies of Your Content as necessary to provide, develop, and improve the Service. This license includes the right to do things like copy it to our database and make backups; show it to you and other Users; parse it into a search index or otherwise analyze it on our servers; share it with other Users; and perform it, in case Your Content is something like music or video. For the avoidance of doubt, use of Your Content to develop, train, and improve artificial intelligence and machine learning models and technologies of Pikifen Portal is NOT within the scope of this license.</p>
 
         <h3>5.5 License Grant to Other Users</h3>
-            <p>Your Content that you post may be viewed by others. By uploading a pack to Pikifen Portal, you agree to allow others to view and save your packs.</p>
-            <br>
-            <p>By uploading a pack, you grant other Users a nonexclusive, worldwide license to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of Your Content, subject to your attribution. You may modify these rights by defining license.txt within a pack's download.</p>
+            <p>Your Content that you post may be viewed by others. By making a pack public, you agree to allow others to view and download your packs.</p>
 
         <h3>5.6 Moral Rights</h3>
             <p>You retain all moral rights to Your Content that you upload, publish, or submit to any part of the Service, including the rights of integrity and attribution. However, you waive these rights and agree not to assert them against us, to enable Pikifen Portal to reasonably exercise the rights granted in Section 4.4, but not otherwise.</p>
             <br>
             <p>To the extent this agreement is not enforceable by applicable law, you grant Pikifen Portal the rights we need to use Your Content without attribution and to make reasonable adaptations of Your Content as necessary to render the Website and provide the Service.</p>
 
+        <h3>5.7 Additional Licenses</h3>
+            <p>You may specify additional licenses for Users by including a license.txt file within a pack's download. The </p>
+            <br>
+            <p>If no additional license is specified, you agree to release your pack under the <a href="https://mit-license.org/">MIT license</a>.</p>
     <br>
     <h2>6. Private Packs</h2>
         <h3>6.1 Control of Private Packs</h3>
