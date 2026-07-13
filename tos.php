@@ -150,7 +150,7 @@
         <h3>5.7 Additional Licenses</h3>
             <p>You may specify additional licenses for Users by including a license.txt file within a pack's download. The </p>
             <br>
-            <p>If no additional license is specified, you agree to release your pack under the <a href="https://mit-license.org/">MIT license</a>.</p>
+            <p>If no additional license is specified, by making your pack public, you agree to release your pack under the <a href="https://mit-license.org/">MIT license</a>.</p>
     <br>
     <h2>6. Private Packs</h2>
         <h3>6.1 Control of Private Packs</h3>
