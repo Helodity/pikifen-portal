@@ -7,7 +7,7 @@
 </header>
 <br>
 <div class="tos-contents">
-    <p>Effective Date: July 13th, 2026</p>
+    <p>Effective Date: July 17th, 2026</p>
     <br>
     <h2>Table of Contents</h2>
     <ol>
@@ -134,23 +134,20 @@
         <h3>5.3 Ownership and License Grants</h3>
             <p>You own Your Content. If you post Content you did not create, you are responsible for ensuring you have the right to post it and for complying with any applicable licenses.</p>
             <br>    
-            <p>You grant us and other Users the licenses in Sections 5.4-5.7. These licenses apply to Your Content. If Your Content already includes a license granting us the permissions we need, no additional license is required. You will not receive payment for these rights. These licenses end when you remove Your Content.</p>
+            <p>You grant us and other Users the licenses in Sections 5.4-5.6. These licenses apply to Your Content. If Your Content already includes a license granting us the permissions we need, no additional license is required. You will not receive payment for these rights. These licenses end when you remove Your Content.</p>
 
         <h3>5.4 License Grant to Us</h3>
             <p>You grant Pikifen Portal the right to store, host, archive, parse, display, and make copies of Your Content as necessary to provide, develop, and improve the Service. This license includes the right to do things like copy it to our database and make backups; show it to you and other Users; parse it into a search index or otherwise analyze it on our servers; share it with other Users; and perform it, in case Your Content is something like music or video. For the avoidance of doubt, use of Your Content to develop, train, and improve artificial intelligence and machine learning models and technologies of Pikifen Portal is NOT within the scope of this license.</p>
 
         <h3>5.5 License Grant to Other Users</h3>
-            <p>Your Content that you post may be viewed by others. By making a pack public, you agree to allow others to view and download your packs.</p>
+            <p>Your Content that you post may be viewed by others. By making a pack public, you agree to allow others to view and save your packs.</p>
+            <br>
+            <p>By uploading a pack, you grant other Users a nonexclusive, worldwide license to use and display Your Content through the Service as permitted by Pikifen Portal's functionality. You may grant additional rights by including license.txt within a pack's download. If you post Content you did not create or own, you are responsible for ensuring it is licensed under terms that permit these uses.</p>
 
         <h3>5.6 Moral Rights</h3>
             <p>You retain all moral rights to Your Content that you upload, publish, or submit to any part of the Service, including the rights of integrity and attribution. However, you waive these rights and agree not to assert them against us, to enable Pikifen Portal to reasonably exercise the rights granted in Section 4.4, but not otherwise.</p>
             <br>
             <p>To the extent this agreement is not enforceable by applicable law, you grant Pikifen Portal the rights we need to use Your Content without attribution and to make reasonable adaptations of Your Content as necessary to render the Website and provide the Service.</p>
-
-        <h3>5.7 Additional Licenses</h3>
-            <p>You may specify additional licenses for Users by including a license.txt file within a pack's download.</p>
-            <br>
-            <p>If no additional license is specified, by making your pack public, you agree to release your pack under the <a href="https://mit-license.org/">MIT license</a>.</p>
     <br>
     <h2>6. Private Packs</h2>
         <h3>6.1 Control of Private Packs</h3>
