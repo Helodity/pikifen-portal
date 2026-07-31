@@ -7,7 +7,7 @@
 </header>
 <br>
 <div class="tos-contents">
-    <p>Effective Date: July 17th, 2026</p>
+    <p>Effective Date: July 31st, 2026</p>
     <br>
     <h2>Table of Contents</h2>
     <ol>
@@ -145,7 +145,7 @@
             <p>By uploading a pack, you grant other Users a nonexclusive, worldwide license to use and display Your Content through the Service as permitted by Pikifen Portal's functionality. You may grant additional rights by including license.txt within a pack's download. If you post Content you did not create or own, you are responsible for ensuring it is licensed under terms that permit these uses.</p>
 
         <h3>5.6 Moral Rights</h3>
-            <p>You retain all moral rights to Your Content that you upload, publish, or submit to any part of the Service, including the rights of integrity and attribution. However, you waive these rights and agree not to assert them against us, to enable Pikifen Portal to reasonably exercise the rights granted in Section 4.4, but not otherwise.</p>
+            <p>You retain all moral rights to Your Content that you upload, publish, or submit to any part of the Service, including the rights of integrity and attribution. However, you waive these rights and agree not to assert them against us, to enable Pikifen Portal to reasonably exercise the rights granted in Section 5.4, but not otherwise.</p>
             <br>
             <p>To the extent this agreement is not enforceable by applicable law, you grant Pikifen Portal the rights we need to use Your Content without attribution and to make reasonable adaptations of Your Content as necessary to render the Website and provide the Service.</p>
     <br>
