@@ -32,8 +32,8 @@
         <li>An "Account" represents your legal relationship with Pikifen Portal.</li>
         <li>“User,” “You,” and “Your” all refer to the individual person that has visited or is using the Website or Service; that accesses or uses any part of the Account; or that directs the use of the Account in the performance of its functions. A User must be at least 13 years of age.</li>
         <li>The "Agreement" and "terms" refers to all of the terms and conditions referenced in this document.</li>
-        <li>"Pikifen Portal", "We", and "Us" all refer to the owners of the domain helodity.pikifen.xyz.</li>
-        <li>The "Website" refers to Pikifen Portal's website located at helodity.pikifen.xyz, and all content, services, and products provided on the Website. It does not refer to other subdomains, such as helodity.xyz.</li>
+        <li>"Pikifen Portal", "We", and "Us" all refer to the owners of the domain pikifen.helodity.xyz.</li>
+        <li>The "Website" refers to Pikifen Portal's website located at pikifen.helodity.xyz, and all content, services, and products provided on the Website. It does not refer to other subdomains, such as helodity.xyz.</li>
         <li>"Content" refers to the text, images, data, or other materials made available through the service.</li>
         <li>"User-Generated Content" means Content that you or another user uploaded through the service.</li>
         <li>"Your Content" means User-Generated Content that you upload, submit, or create. </li>
