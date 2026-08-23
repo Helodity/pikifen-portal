@@ -93,12 +93,6 @@ if(!$isOwner && !$isPublic) {
 			<h2>Versions</h2>
 		</div>
 		<table style="width:100%; text-align:center;">
-			<?php
-				$stmt = $conn->prepare("SELECT * FROM pack_versions WHERE pack_id = ? ORDER BY pack_version DESC");
-				$stmt->bind_param("i", $packID);
-				$stmt->execute();
-				$version_query = $stmt->get_result();
-			?>
 			<tr>
 				<th>Pack Version</th>
 				<th>Pikifen Version<th>
@@ -113,17 +107,24 @@ if(!$isOwner && !$isPublic) {
 					$latest_query = $stmt->get_result();
 
 					if($row = $latest_query->fetch_assoc()) {
+						$id = $row['id'];
 						$engineVersion = $row['engine_version'];
 						$packVersion = $row['pack_version'];
 						$downloadPath = $SITE_ROOT . '/packs/' . $packID . '/' . getPackFilename($packID, $packVersion, $engineVersion);
 					?>
-						<button class="button-main" onclick="location.href='<?= $downloadPath ?>'">Download for current version</button>
+						<button class="button-main" onclick="location.href='download.php/?id=<?=$id?>'">Download for current version</button>
 					<?php } else { ?>
 						<p></p>
 					<?php } ?>
 				</th>
 			</tr>
-				<?php while ($row = $version_query->fetch_assoc()) {
+				<?php 
+				$stmt = $conn->prepare("SELECT * FROM pack_versions WHERE pack_id = ? ORDER BY pack_version DESC");
+				$stmt->bind_param("i", $packID);
+				$stmt->execute();
+				$version_query = $stmt->get_result();
+				while ($row = $version_query->fetch_assoc()) {
+					$id = $row['id'];
 					$engineVersion = $row['engine_version'];
 					$packVersion = $row['pack_version'];
 					$downloadPath = $SITE_ROOT . '/packs/' . $packID . '/' . getPackFilename($packID, $packVersion, $engineVersion);
@@ -131,7 +132,7 @@ if(!$isOwner && !$isPublic) {
 					<tr>
 						<td>V <?= int_to_version($packVersion) ?></td>
 						<td>V <?= int_to_version($engineVersion) ?><td>
-						<td><button class="button-main" onclick="location.href='<?= $downloadPath ?>'">Download</button></td>
+						<td><button class="button-main" onclick="location.href='download.php?id=<?=$id?>'">Download</button></td>
 					</tr>
 				<?php } ?>
 		</table>
