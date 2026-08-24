@@ -122,6 +122,7 @@ textarea {
 }
 
 
+/* TODO: Figure out how to keep the background position fixed during animations */
 @keyframes fade-in {
 	0% { transform: scale(1.01); opacity: 0; }
 	100% { transform: scale(1); opacity: 1;}
@@ -129,14 +130,16 @@ textarea {
 
 main {
 	border-radius: var(--global_border_radius);
-	background: var(--content_gradient);
+	background: url(../img/bg_blurred.jpg);
+	background-attachment: fixed;
+	background-size: 100vw 100vh;
+	background-position: center center;
+	background-repeat: no-repeat;
 	animation: fade-in 0.4s ease-out;
 	box-sizing: border-box;
 	width: 80%;
-	backdrop-filter: blur(4px);
 	margin: 32px auto 0px auto;
 	box-shadow: 0px 0px 4px #000000;
-	transform: translate3d(0,0,0);
 }
 
 header {
@@ -226,7 +229,7 @@ img {
 	position: fixed;
 	background: url(../img/bg.jpg);
 	background-position: center center;
-	background-size: cover;
+	background-size: 100vw 100vh;
 	background-repeat: no-repeat;
 }
 
