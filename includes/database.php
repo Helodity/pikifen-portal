@@ -144,8 +144,11 @@ function get_pack_tag_string(int $packID) {
 	$result = $stmt->get_result();
 
 	$output = "";
-	while($row = $result->fetch_assoc()){
-		$output = $output . "; " . $row['tag'];
+	if($row = $result->fetch_assoc()) {
+		$output = $row['tag'];
+		while($row = $result->fetch_assoc()){
+			$output = $output . "; " . $row['tag'];
+		}
 	}
 	return $output;
 }
