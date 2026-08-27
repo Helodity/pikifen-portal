@@ -9,6 +9,7 @@ $ext = 'png';
 $srcImgLocalUrl = $LOCAL_ROOT . $imgURL . '.' . $ext;
 $srcThumbLocalURL = $LOCAL_ROOT . $imgURL.'_thumb_' . $imgSize . '.' . $ext;
 
+clearstatcache();
 // Check if file exists
 if (!file_exists($srcImgLocalUrl))
 {
@@ -31,7 +32,7 @@ else
 	//Thumbnail doesn't exist, make it.
 	list($width, $height) = getimagesize($srcImgLocalUrl);
 
-	$percent = $imgSize / $width;
+	$percent = $imgSize / max($width, $height);
 
 	$newWidth = $width * $percent;
 	$newHeight = $height * $percent;
