@@ -613,6 +613,7 @@ img {
 .pack-icon {
 	object-fit: contain;
 	width: 100%;
+	aspect-ratio: 1;
 	display: inline-block;
 	border-radius: var(--global_border_radius);
 }
