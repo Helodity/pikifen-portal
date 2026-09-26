@@ -62,9 +62,9 @@ if(!$isOwner && !$isPublic) {
 		</div>
 		<p>By <a href='../user?id=<?= $makerID ?>'><?= $makerName ?></a>
 			<?php
-			if(isset($_SESSION['accountID'])) {
+			if($isLoggedIn) {
 			?>
-				<button class='button-main' id='favoriteButton'  onclick="onFavoriteSubmit(<?=$packID?>)">
+				<button class='button-main' id='favoriteButton' onclick="onFavoriteSubmit(<?=$packID?>)">
 				<?= has_favorite($_SESSION['accountID'], $packID) ? "Starred ★ " : "Star ☆ " ?>
 				<?= get_favorite_count($packID) ?>
 				</button>
@@ -79,6 +79,10 @@ if(!$isOwner && !$isPublic) {
 				<p class="list-entry-tag"><?=$tag?></p>
 			<?php } ?>
 		</div>
+		<?php if ($isLoggedIn) { ?>
+		<button class='button-warning' onclick="submitReport(<?=$packID?>)">Report</button>
+		<?php } ?>
+
 		<?php if ($hasManageOptions) { ?>
 		<button class='button-main' onclick='location.href="manage?id=<?= $packID ?>"'>Manage Pack</button>
 		<?php } ?>
