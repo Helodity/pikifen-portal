@@ -15,6 +15,9 @@ if(isset($_SESSION['accountID'])) {
 		["name" => "Upload <img src='$SITE_ROOT/img/upload.svg' class='button-header-image'>", "link" => "pack/upload"],
 		["name" => "Logout <img src='$SITE_ROOT/img/logout.svg' class='button-header-image'>", "link" => "logout.php"],
 	];
+	if(account_has_permission($id, PERMISSIONS::MODIFY_OTHERS)) {
+		$header_info[] = ["name" => "Reports <img src='$SITE_ROOT/img/report.svg' class='button-header-image'>", "link" => "reports.php"];
+	}
 }
 
 $search_placeholder = isset($_GET['query']) ? $_GET['query'] : "";
