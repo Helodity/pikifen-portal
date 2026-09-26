@@ -125,7 +125,7 @@
 					<td>V <?= int_to_version($packVersion) ?></td>
 					<td>V <?= int_to_version($engineVersion) ?><td>
 					<td>
-						<form action="deleteVersion.php" method="post">
+						<form onsubmit="return confirm('Are you sure you want to delete this version?');" action="deleteVersion.php" method="post">
 							<button class="button-warning" type='submit'>Delete</button>
 							<input type="hidden" name="versionID" value="<?=$versionID?>">
 						</form>
@@ -136,7 +136,7 @@
 
 
 		<h1 style="color: var(--error_color);">Danger Zone</h1>
-		<button class="button-warning" onclick="location.href='delete.php?id=<?= $packID ?>'">Delete Pack</button>
+		<button class="button-warning" onclick="if(confirm('Are you sure you want to delete this pack?') == true) { location.href='delete.php?id=<?= $packID ?>' }">Delete Pack</button>
 		<p class='error-text' style='display: inline'>This will delete ALL versions of the pack and remove it from <?php if(!$isOwner) { echo "their"; } else { echo "your";} ?> account!</p>
 
 

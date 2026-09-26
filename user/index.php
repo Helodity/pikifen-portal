@@ -80,13 +80,13 @@
 	<br>
 	<h2 style="color: var(--error_color);">Danger Zone</h2>
 	<?php if(!$ownAccount) { ?>
-		<form action="ban.php" method="post">
+		<form onsubmit="return confirm('Are you sure you want to ban this user?');" action="ban.php" method="post">
 		<button type="submit" class="button-warning">Ban User</button>
 		<p class="error-text" style="display: inline-block">This will delete everything uploaded by this user, and prevent them from uploading anything new!</p>
 		<input type='hidden' name="userID" value="<?= $accountID ?>">
 		</form>
 	<?php } else { ?>
-	<form action="delete.php" method="post">
+	<form onsubmit="return confirm('Are you sure you want to delete your account?');" action="delete.php" method="post">
 		<button type="submit" class="button-warning">Delete Account</button>
 		<p class="error-text" style="display: inline-block">This will delete your account, and everything uploaded by it!</p>
 		<input type='hidden' name="userID" value="<?= $accountID ?>">
