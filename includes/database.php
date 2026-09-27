@@ -1,6 +1,7 @@
 <?php
 //Defines $servername, $dbusername, $dbpassword, and $dbname
 include 'database_credentials.php';
+include_once "globals.php";
 
 // Create connection
 $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);

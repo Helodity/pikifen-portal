@@ -1,6 +1,7 @@
 <?php
 //Contains definition for $PATH_FROM_ROOT
-include "deployment_globals.php";
+include_once "deployment_globals.php";
+include_once "session.php";
 
 $SITE_NAME = "Pikifen Portal";
 $SITE_ROOT = 'https://' . $_SERVER['HTTP_HOST'] . $PATH_FROM_ROOT; //Use when outputting HTML;

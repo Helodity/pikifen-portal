@@ -1,10 +1,9 @@
 <?php
 	include_once '../../includes/database.php';
-	include '../../includes/functions.php';
+	include_once '../../includes/functions.php';
 		
 		
 	header('Content-Type: text/plain; charset=utf-8');
-	session_start();
 	//If the method wasnt set right, return to the main page
 	if($_SERVER["REQUEST_METHOD"] != "GET") {
 		header("Location: ../../");

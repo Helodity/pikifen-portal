@@ -1,6 +1,5 @@
 <?php
 	include "includes/globals.php";
-	session_start();
 
 	unset($_SESSION['accountID']);
 	

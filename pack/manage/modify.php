@@ -1,7 +1,5 @@
 <?php
-	session_start();
-	include '../../includes/globals.php';
-	include '../../includes/functions.php';
+	include_once '../../includes/functions.php';
 	include_once '../../includes/database.php';
 	
 	if($_SERVER["REQUEST_METHOD"] != "POST") {

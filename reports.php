@@ -1,6 +1,5 @@
 <?php
-	session_start();
-    include 'includes/functions.php';
+    include_once 'includes/functions.php';
     include_once 'includes/database.php';
 
     //Require the user to be logged in

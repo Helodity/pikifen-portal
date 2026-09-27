@@ -1,6 +1,5 @@
 <?php
-	session_start();
-	include '../includes/database.php';
+	include_once '../includes/database.php';
 
 	$valid_request = true;
 	//If the method wasnt set right, return to the main page

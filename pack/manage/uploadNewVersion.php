@@ -1,7 +1,5 @@
 <?php
-	session_start();
-	include '../../includes/globals.php';
-	include '../../includes/functions.php';
+	include_once '../../includes/functions.php';
 	include_once '../../includes/database.php';
 			
 	header('Content-Type: text/plain; charset=utf-8');

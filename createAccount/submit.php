@@ -1,5 +1,4 @@
 <?php
-	session_start();
 	require '../includes/database.php';
 	
 	//If the method wasnt set right, return to the main page

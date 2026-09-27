@@ -1,6 +1,5 @@
 <?php
-	session_start();
-	require '../includes/database.php';
+	include_once '../includes/database.php';
 	
 	//If the method wasnt set right, return to the main page
 	if($_SERVER["REQUEST_METHOD"] != "POST") {
