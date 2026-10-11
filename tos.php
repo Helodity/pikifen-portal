@@ -7,7 +7,18 @@
 </header>
 <br>
 <div class="tos-contents">
-    <p>Effective Date: July 31st, 2026</p>
+
+    <h2>TLDR:</h2>
+    <ul>
+        <li>Don't post copyrighted content, adult content, viruses, etc.</li>
+        <li>Don't try to circumvent site limitations</li>
+        <li>Anything deemed unacceptable may be removed without warning.</li>
+        <li>There are no warnings for when these terms are updated. Please check back regularly.</li>
+    </ul>
+
+    <br>
+    <br>
+    <p>Effective Date: October 11th, 2026</p>
     <br>
     <h2>Table of Contents</h2>
     <ol>
@@ -118,18 +129,21 @@
             <p>You will not reproduce, duplicate, copy, sell, resell, or exploit any portion of the Service, use of the Service, or access to the Service without our express written permission.</p>
 
         <h3>4.6 Excessive Bandwidth Use</h3>
-            <p>If we determine your bandwidth usage to be significantly excessive in reation to other Users of similar features, we reserve the right to suspend your Account, throttle your bandwidth consumption, or otherwise limit your activity until you can reduce your bandwidth consumption. We also reserve the right—after providing advance notice—to delete User-Generated Content that we determine to be placing undue strain on our infrastructure.</p>
+            <p>If we determine your bandwidth usage to be significantly excessive in reation to other Users of similar features, we reserve the right to suspend your Account, throttle your bandwidth consumption, or otherwise limit your activity until you can reduce your bandwidth consumption. We also reserve the right to delete User-Generated Content that we determine to be placing undue strain on our infrastructure.</p>
 
         <h3>4.7 User Protection</h3>
             <p>You must not engage in activity that significantly harms other users. We will interpret our policies and resolve disputes in favor of protecting users as a whole.</p>
-    
+
+        <h3>4.8 Final Decision</h3>
+            <p>We reserve the right to remove any your content at any time for any reason without providing warning.</p>
+        
     <br>
     <h2>5. User-Generated Content</h2>
         <h3>5.1 Responsibility for User-Generated Content</h3>
             <p>You are responsible for Your Content and any harm resulting from it. This includes Content you post, upload, or make available through the Service. We are not responsible for any public display or misuse of Your Content.</p>
 
         <h3>5.2 Pikifen Portal May Remove Content</h3>
-            <p>We may refuse or remove User-Generated Content that violates applicable law or our terms and policies. We access private packs as described in Section 5.</p>
+            <p>We may refuse or remove User-Generated Content that violates applicable law or our terms and policies. We access private packs as described in Section 6.</p>
 
         <h3>5.3 Ownership and License Grants</h3>
             <p>You own Your Content. If you post Content you did not create, you are responsible for ensuring you have the right to post it and for complying with any applicable licenses.</p>
@@ -148,6 +162,7 @@
             <p>You retain all moral rights to Your Content that you upload, publish, or submit to any part of the Service, including the rights of integrity and attribution. However, you waive these rights and agree not to assert them against us, to enable Pikifen Portal to reasonably exercise the rights granted in Section 5.4, but not otherwise.</p>
             <br>
             <p>To the extent this agreement is not enforceable by applicable law, you grant Pikifen Portal the rights we need to use Your Content without attribution and to make reasonable adaptations of Your Content as necessary to render the Website and provide the Service.</p>
+    
     <br>
     <h2>6. Private Packs</h2>
         <h3>6.1 Control of Private Packs</h3>
