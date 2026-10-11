@@ -1,8 +1,8 @@
 <?php
-    include_once 'includes/functions.php';
-    include_once 'includes/database.php';
+	$PAGE_NAME = 'Reports';
+	include 'includes/header.php';
 
-    //Require the user to be logged in
+	//Require the user to be logged in
 	if(!isset($_SESSION['accountID'])){
 		header("Location:" . $SITE_ROOT);
 		die();
@@ -21,8 +21,19 @@
     
     echo "<h1>THIS PAGE IS A WIP</h1>";
 
-    while ($row = $result->fetch_assoc()) {
-        var_dump($row);
-    }
+	?>
+    <table>
+		<?php while ($row = $result->fetch_assoc()) {?>
+			<tr>
+				<td><?=$row["id"]?></td>
+				<td><?=$row["pack_id"]?></td>
+				<td><?=$row["reason"]?></td>
+			</tr>
+
+		<?php } ?>
+	</table>
+	<?php
+
+	include 'includes/footer.php';
 
 ?>
