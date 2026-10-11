@@ -5,6 +5,26 @@ $imgURL = $_GET['img'];
 $imgSize = $_GET['size'] ?? 125;
 
 $ext = 'png';
+$outext = $_GET['ext'] ?? 'webp';
+
+switch ($outext) {
+	case 'webp':
+		//Doesn't exist on local build (linux moment)
+		if(!function_exists('imagewebp')){
+			$outext = 'png';
+		}
+	case 'png':
+	case 'jpg':
+	case 'jpeg':
+		//Empty, but prevents dying
+		break;
+
+
+	default:
+		die('Invalid Extension');
+		break;
+}
+
 
 $srcImgLocalUrl = $LOCAL_ROOT . $imgURL . '.' . $ext;
 $srcThumbLocalURL = $LOCAL_ROOT . $imgURL.'_thumb_' . $imgSize . '.' . $ext;
@@ -52,10 +72,21 @@ else
 }
 
 
-header('Content-Type: image/'.$ext);
+header('Content-Type: image/'.$outext);
 
 imagesavealpha($img, true);
-imagepng($img);
+
+switch ($outext) {
+	case 'webp':
+		imagewebp($img, null, 50);
+	case 'png':
+		imagepng($img);
+		break;
+	case 'jpg':
+	case 'jpeg':
+		imagejpeg($img);
+		break;
+}
 
 ?>
 
