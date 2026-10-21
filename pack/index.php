@@ -8,7 +8,8 @@ if($_SERVER["REQUEST_METHOD"] != "GET") {
 	header("Location: ../");
 	die();
 }
-$packID = $_GET['id'];
+//Set an invalid id if it doesnt exist
+$packID = $_GET['id'] ?? -1;
 
 //Get the selected
 $stmt = $conn->prepare("SELECT * FROM packs WHERE id = ?");
