@@ -14,6 +14,11 @@ switch ($outext) {
 		if(!function_exists('imagewebp')){
 			$outext = 'png';
 		}
+	case 'avif':
+		//Doesn't exist on local build (linux moment)
+		if(!function_exists('imageavif')){
+			$outext = 'png';
+		}
 	case 'png':
 	case 'jpg':
 	case 'jpeg':
@@ -80,6 +85,8 @@ imagesavealpha($img, true);
 switch ($outext) {
 	case 'webp':
 		imagewebp($img, null, $outQuality);
+	case 'avif':
+		imageavif($img, null, $outQuality);
 	case 'png':
 		imagepng($img);
 		break;
