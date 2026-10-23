@@ -33,7 +33,7 @@ $search_placeholder = isset($_GET['query']) ? $_GET['query'] : "";
 	<body>
 		<div class="header">
 			<div class="header-title">
-				<a class='header-logo-anchor' href="<?= $SITE_ROOT ?>"><img src='<?= $SITE_ROOT ?>/img/icon.png' class='header-logo'></a>
+				<a class='header-logo-anchor' href="<?= $SITE_ROOT ?>"><img src='<?= $SITE_ROOT ?>/img/icon.webp' class='header-logo'></a>
 				<div class="header-text">
 					<a class="header-text-site-name" href="<?= $SITE_ROOT ?>"><?= $SITE_NAME ?></a>
 					<p class="header-text-page-name""><?= $PAGE_NAME ?></p>

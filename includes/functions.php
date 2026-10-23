@@ -36,7 +36,7 @@ function get_thumbnail(int $packID, int $size = 100, int $quality = 50): string 
 	if(file_exists($localthumbnailPath)) {
 		return $SITE_ROOT . '/includes/serveImg.php?img=/packs/' . $packID . '/thumbnail&size=' . $size . "&quality=" . $quality;
 	}
-	return $SITE_ROOT . '/img/default_thumbnail.png';
+	return $SITE_ROOT . '/img/default_thumbnail.webp';
 }
 
 function make_gallery(string $title, $queryResult) {

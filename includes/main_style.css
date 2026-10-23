@@ -195,7 +195,7 @@ img {
 	left: 0px;
 	z-index: -1;
 	position: fixed;
-	background: url(../img/bg.jpg);
+	background: url(../img/bg.webp);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
