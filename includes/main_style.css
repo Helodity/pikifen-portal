@@ -65,37 +65,7 @@
 	--font_size_medium: 18px;
 	--font_size_small: 14px;
 
-	--gallery_entries_per_row: 12;
-}
-
-/*
- * Shrink gallery entries based on screen size
- * Do this because firefox cant calc(px / px)
- */
-@media (max-width: 1400px) {
-	:root {
-		--gallery_entries_per_row: 10;
-	}
-}
-@media (max-width: 1200px) {
-	:root {
-		--gallery_entries_per_row: 8;
-	}
-}
-@media (max-width: 1000px) {
-	:root {
-		--gallery_entries_per_row: 6;
-	}
-}
-@media (max-width: 800px) {
-	:root {
-		--gallery_entries_per_row: 4;
-	}
-}
-@media (max-width: 400px) {
-	:root {
-		--gallery_entries_per_row: 2;
-	}
+	--gallery_entries_per_row: round(down, calc((100vw / 1920px) * 12));
 }
 
 @font-face {
