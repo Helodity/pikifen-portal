@@ -27,14 +27,14 @@ function int_to_version(int $version): string {
 	return $majorVersion . "." . $minorVersion . "." . $revisionVersion;
 }
 
-function get_thumbnail(int $packID, int $size = 100): string {
+function get_thumbnail(int $packID, int $size = 100, int $quality = 50): string {
 	global $SITE_ROOT;
 	global $LOCAL_ROOT;
 
 	$localthumbnailPath = $LOCAL_ROOT . '/packs/' . $packID . '/thumbnail.png';
 	clearstatcache();
 	if(file_exists($localthumbnailPath)) {
-		return $SITE_ROOT . '/includes/serveImg.php?img=/packs/' . $packID . '/thumbnail&size=' . $size;
+		return $SITE_ROOT . '/includes/serveImg.php?img=/packs/' . $packID . '/thumbnail&size=' . $size . "&quality=" . $quality;
 	}
 	return $SITE_ROOT . '/img/default_thumbnail.png';
 }
@@ -56,7 +56,7 @@ function make_gallery(string $title, $queryResult) {
 
 function make_gallery_item(int $packID, int $entryID) {
 	global $SITE_ROOT;
-	$thumbnailImg = get_thumbnail($packID);
+	$thumbnailImg = get_thumbnail($packID, 100, 30);
 	$packInfo = get_pack_info($packID);
 	$delay = 0.3 + ($entryID % 2) * 0.2;
 	echo '<a href="' . $SITE_ROOT . '/pack?id='. $packID .'" class="gallery-item-root" style="animation: gallery-item-dropdown 0.5s cubic-bezier(0.65, 1.33, 0.7, 1.13) ' . $delay . 's backwards">';

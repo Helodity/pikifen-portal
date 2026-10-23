@@ -6,6 +6,7 @@ $imgSize = $_GET['size'] ?? 125;
 
 $ext = 'png';
 $outext = $_GET['ext'] ?? 'webp';
+$outQuality = $_GET['quality'] ?? 50;
 
 switch ($outext) {
 	case 'webp':
@@ -78,7 +79,7 @@ imagesavealpha($img, true);
 
 switch ($outext) {
 	case 'webp':
-		imagewebp($img, null, 50);
+		imagewebp($img, null, $outQuality);
 	case 'png':
 		imagepng($img);
 		break;
