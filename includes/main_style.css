@@ -70,6 +70,7 @@
 
 @font-face {
 	font-family: mainFont;
+	font-display: swap;
 	src: url(../font/main.woff2);
 }
 
