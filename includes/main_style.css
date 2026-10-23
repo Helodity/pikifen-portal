@@ -196,6 +196,7 @@ img {
 	z-index: -1;
 	position: fixed;
 	background: url(../img/bg.webp);
+	background-color: #1a7a69;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
