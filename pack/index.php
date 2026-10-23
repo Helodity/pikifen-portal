@@ -34,7 +34,7 @@ $packDescription = $pack['description'];
 
 $makerName = get_username($makerID);
 
-
+$HAS_SCRIPT = true;
 $PAGE_NAME = $packName;
 include '../includes/header.php';
 
