@@ -1,12 +1,11 @@
 <?php
+	$PAGE_NAME = "Upload";
+	include '../../includes/header.php';
+
 	if(!isset($_SESSION['accountID'])) {
 		header("Location:". $SITE_ROOT ."/login");
 		die();
 	}
-
-
-	$PAGE_NAME = "Upload";
-	include '../../includes/header.php';
 ?>
 
 
