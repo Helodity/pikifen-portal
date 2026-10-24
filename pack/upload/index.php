@@ -1,5 +1,6 @@
 <?php
 	$PAGE_NAME = "Upload";
+	$HAS_CUSTOM_STYLE = true;
 	include '../../includes/header.php';
 
 	if(!isset($_SESSION['accountID'])) {
