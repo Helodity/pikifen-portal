@@ -66,7 +66,7 @@ else
 
 	//Thumbnail exists, serve it.
 	$srcImg = imagecreatefrompng($srcImgLocalUrl);
-	$img = imagecreatetruecolor($newWidth, $newHeight);
+	$img = imagecreatetruecolor((int)$newWidth, (int)$newHeight);
 
 	imagefill($img,0,0,0x7fff0000);
 
