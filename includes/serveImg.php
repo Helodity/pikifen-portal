@@ -60,13 +60,13 @@ else
 
 	$percent = $imgSize / max($width, $height);
 
-	$newWidth = $width * $percent;
-	$newHeight = $height * $percent;
+	$newWidth = (int)($width * $percent);
+	$newHeight = (int)($height * $percent);
 
 
 	//Thumbnail exists, serve it.
 	$srcImg = imagecreatefrompng($srcImgLocalUrl);
-	$img = imagecreatetruecolor((int)$newWidth, (int)$newHeight);
+	$img = imagecreatetruecolor($newWidth, $newHeight);
 
 	imagefill($img,0,0,0x7fff0000);
 
