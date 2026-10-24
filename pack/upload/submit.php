@@ -2,7 +2,6 @@
 	include_once '../../includes/functions.php';
 	include_once '../../includes/database.php';
 			
-	header('Content-Type: text/plain; charset=utf-8');
 	//If the method wasnt set right, return to the main page
 	if($_SERVER["REQUEST_METHOD"] != "POST") {
 		header("Location: ". $SITE_ROOT);
