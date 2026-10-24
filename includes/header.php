@@ -31,7 +31,7 @@ $search_placeholder = isset($_GET['query']) ? $_GET['query'] : "";
 		<?php if(isset($HAS_CUSTOM_STYLE) && $HAS_CUSTOM_STYLE) { ?>
 		<link href='style.css' type="text/css" rel="stylesheet" />
 		<?php } ?>
-		<link rel="icon" type="image/x-icon" href='<?= $SITE_ROOT ?>/img/icon.png'>
+		<link rel="icon" type="image/x-icon" href='<?= $SITE_ROOT ?>/img/icon.webp'>
 	</head>
 	<body>
 		<div class="header">
