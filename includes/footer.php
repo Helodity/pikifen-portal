@@ -12,7 +12,7 @@ This is a non-commercial project created by fans of the Pikmin franchise for ent
 </footer>
 </main>
 </body>
-<?php if($HAS_SCRIPT) { ?>
+<?php if(isset($HAS_SCRIPT) && $HAS_SCRIPT) { ?>
 <script src="script.js"></script>
 <?php } ?>
 </html>
