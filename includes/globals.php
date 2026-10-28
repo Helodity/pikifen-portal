@@ -1,6 +1,6 @@
 <?php
 //Contains definition for $PATH_FROM_ROOT
-include_once "deployment_globals.php";
+include_once "credentials/deployment_globals.php";
 include_once "session.php";
 
 $SITE_NAME = "Pikifen Portal";

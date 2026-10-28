@@ -1,6 +1,6 @@
 <?php
 //Defines $servername, $dbusername, $dbpassword, and $dbname
-include 'database_credentials.php';
+include 'credentials/database_credentials.php';
 include_once "globals.php";
 
 // Create connection
