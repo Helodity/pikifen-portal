@@ -56,7 +56,7 @@ function make_gallery(string $title, $queryResult) {
 
 function make_gallery_item(int $packID, int $entryID) {
 	global $SITE_ROOT;
-	$thumbnailImg = get_thumbnail($packID, 100, 30);
+	$thumbnailImg = get_thumbnail($packID, 100, 75);
 	$packInfo = get_pack_info($packID);
 	$delay = 0.3 + ($entryID % 2) * 0.2;
 	echo '<a href="' . $SITE_ROOT . '/pack?id='. $packID .'" class="gallery-item-root" style="animation: gallery-item-dropdown 0.5s cubic-bezier(0.65, 1.33, 0.7, 1.13) ' . $delay . 's backwards">';

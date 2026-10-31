@@ -69,6 +69,12 @@
             'jpg' => 'image/jpeg',
             'png' => 'image/png'
         );
+		if(function_exists('imagecreatefromwebp')) {
+			$validExtensions['webp'] = 'image/webp';
+		}
+		if(function_exists('imagecreatefromavif')) {
+			$validExtensions['avif'] = 'image/avif';
+		}
 
 		// Verify file extension
 		$finfo = new finfo(FILEINFO_MIME_TYPE);
@@ -82,12 +88,42 @@
 		}
 
 		$target_dir = $LOCAL_ROOT . "/packs/" . $packID  . "/";
-		if(!move_uploaded_file(
-			$_FILES["thumbnail"]["tmp_name"], 
-			$target_dir . "thumbnail.png"
-		)) {
+		$sucessful_upload = false;
+		switch ($ext) {
+			case 'webp':
+				$img = imagecreatefromwebp($_FILES["thumbnail"]["tmp_name"]);
+				break;
+			case 'avif':
+				$img = imagecreatefromavif($_FILES["thumbnail"]["tmp_name"]);
+				break;
+			case 'png':
+				$img = imagecreatefrompng($_FILES["thumbnail"]["tmp_name"]);
+				break;
+			case 'jpg':
+			case 'jpeg':
+				$img = imagecreatefromjpeg($_FILES["thumbnail"]["tmp_name"]);
+				break;
+		}
+		if(!$img) {
 			throw new RuntimeException('Unable to upload thumbnail! Error #1. Contact the site owner.');
 		}
+		//Save to file
+		imagesavealpha($img, true);
+		imagepng($img, $target_dir . "thumbnail.png");
+
+		//Clear the old image cache
+		$cacheDir = $LOCAL_ROOT . "/cache/packs/". $packID;
+		$it = new RecursiveDirectoryIterator($cacheDir, RecursiveDirectoryIterator::SKIP_DOTS);
+		$files = new RecursiveIteratorIterator($it,
+					RecursiveIteratorIterator::CHILD_FIRST);
+		foreach($files as $file) {
+			if ($file->isDir()){
+				rmdir($file->getPathname());
+			} else {
+				unlink($file->getPathname());
+			}
+		}
+
 	
 	} catch (RuntimeException $e) {
 		$_SESSION['errors']['thumbnailUpload'] = $e->getMessage();
