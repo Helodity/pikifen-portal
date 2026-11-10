@@ -38,13 +38,13 @@ $search_placeholder = isset($_GET['query']) ? $_GET['query'] : "";
 			<div class="header-title">
 				<a class='header-logo-anchor' href="<?= $SITE_ROOT ?>"><img src='<?= $SITE_ROOT ?>/img/icon.webp' class='header-logo'></a>
 				<div class="header-text">
-					<a class="header-text-site-name" href="<?= $SITE_ROOT ?>"><?= $SITE_NAME ?></a>
-					<p class="header-text-page-name""><?= $PAGE_NAME ?></p>
+					<a class="header-text-site-name no-text-on-small-screen" href="<?= $SITE_ROOT ?>"><?= $SITE_NAME ?></a>
+					<p class="header-text-page-name no-text-on-small-screen""><?= $PAGE_NAME ?></p>
 				</div>
 			</div>
 			<div class="header-search">
 				<form action="<?= $SITE_ROOT ?>/search.php" class="header-form">
-					<input class="header-search-input" type="text" size=1 placeholder="Search packs..." value="<?= $search_placeholder ?>" name="query"></input>
+					<input class="header-search-input" type="text" size=1 placeholder="Search..." value="<?= $search_placeholder ?>" name="query"></input>
 					<button type="submit" style='display: none;'>Go!</button>
 					<button type="submit" name="random" value="true" class="button-header no-text-on-small-screen header-form-item">I'm feeling lucky <img src='<?= $SITE_ROOT?>/img/random.svg' class='button-header-image'></button>
 				</form>
